@@ -213,7 +213,7 @@ if selected == 'Home':
         st.write(urlPaper)
         webbrowser.open_new_tab(urlPaper) 
         
-    urlGit='https://github.com/Riqard/MFG598-Final-Project.git'
+    urlGit='https://github.com/Riqard/Country-Reference.git'
     if st.button('Find the GitHub Repository Here',use_container_width=True):
         st.write(urlGit)
         webbrowser.open_new_tab(urlGit) 
@@ -356,6 +356,14 @@ wage['time']=wage['time'].astype(str)
 wage=wage.loc[:,['time','obs_value']]
 wage=wage.pivot_table(values='obs_value', index='Country', columns='time', aggfunc='first')
 
+#wage general
+totwage=pd.read_csv('EAR_4MTH_SEX_ECO_CUR_NB_A-filtered-2023-05-02 (2).csv')
+totwage=totwage.rename(columns={"ref_area.label": "Country"}).set_index('Country')
+totwage['time']=totwage['time'].astype(str)
+totwage=totwage.loc[:,['time','obs_value']]
+totwage=totwage.pivot_table(values='obs_value', index='Country', columns='time', aggfunc='first')
+
+
 # Code for Manufacturing section
 if selected == 'Manufacturing':
     st.title('Manufacturing')
@@ -370,15 +378,18 @@ if selected == 'Manufacturing':
     #Display data
     with mfgDataTb:
         mfgChoice=[]
-        selMfg=st.selectbox('Choose what Data you Wish to See',('Total Output','Average Wage'))
+        selMfg=st.selectbox('Choose what Data you Wish to See',('Total Output','Average Monthly Manufacturing Wage', 'Average General Wage'))
         mfgChoice.append(selMfg)
         
         if mfgChoice==['Total Output']:
             # runs mfg data
             mfgShow=show_Data(mfgData,cna,usa,1975,2021,2021,'Amount of Output in US Dollars', 'US Dollars' , 'Compare Amount of Output for a Specific Year', "Country's Manufacturing Output")
         
-        if mfgChoice==['Average Wage']:
+        if mfgChoice==['Average Monthly Manufacturing Wage']:
             wageShow=show_Data(wage,cna,usa,1969,2022,2020,'Average Wage in US Dollars', 'US Dollars' , 'Compare Average Wage for a Specific Year', "Country's Average Manufacturing Wage")
+        
+        if mfgChoice==['Average General Wage']:
+            genwWgeShow=show_Data(totwage,cna,usa,1969,2022,2020,'Average Wage in US Dollars', 'US Dollars' , 'Compare Average Wage for a Specific Year', "Country's Average Wage")
         
                     
         
@@ -390,11 +401,10 @@ if selected == 'Manufacturing':
         if st.button('World Bank'):
             st.write(mfgURL)
             webbrowser.open_new_tab(mfgURL)      
-        st.write('This Data for Manufacturing Wages originated from the International Labor Organization')
+        st.write('This Data for Manufacturing Wages and General Wages originated from the International Labor Organization')
         if st.button('International Labor Organization'):
             st.write(wageURL)
             webbrowser.open_new_tab(wageURL)      
-    
 
 #MILITARY TAB#-------------------------------------------------------------------------------------------------------------------------------------------------------
 
