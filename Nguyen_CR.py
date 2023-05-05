@@ -206,7 +206,7 @@ if selected == 'Home':
             
             ''', language='python')
     
-    urlPaper='https://drive.google.com/file/d/18EnmT0dNU9sLqIjlkL_8kKsp_dnzauwH/view?usp=share_link'
+    urlPaper='https://drive.google.com/file/d/11SSczIRyHb7qO7VhDRuTsC7HeSDhMBcG/view?usp=sharing'
     if st.button('Find the Report Here',use_container_width=True):
         st.write(urlPaper)
 
@@ -216,9 +216,9 @@ if selected == 'Home':
         st.write(urlGit)
 
         
-    urlApp='https://nguyencountryreferenceguide.streamlit.app/'
-    if st.button('Go to Online Version',use_container_width=True):
-        st.write(urlApp)
+    urlPres='https://drive.google.com/file/d/1k-0dybbF5_7EwAMUpgbHi24hMhsnEJBI/view?usp=sharing'
+    if st.button('Go to Online Presentation',use_container_width=True):
+        st.write(urlPres)
 
 
       
