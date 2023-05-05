@@ -10,7 +10,6 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import plotly.express as px
 from streamlit_option_menu import option_menu
-import webbrowser
 from PIL import Image
 import zipfile as zp
 
@@ -202,7 +201,6 @@ if selected == 'Home':
             import streamlit as st \n
             import plotly.express as px \n
             from streamlit_option_menu import option_menu \n
-            import webbrowser \n
             from PIL import Image \n
             import zipfile as zp
             
@@ -211,17 +209,17 @@ if selected == 'Home':
     urlPaper='https://drive.google.com/file/d/18EnmT0dNU9sLqIjlkL_8kKsp_dnzauwH/view?usp=share_link'
     if st.button('Find the Report Here',use_container_width=True):
         st.write(urlPaper)
-        webbrowser.open_new_tab(urlPaper) 
+
         
     urlGit='https://github.com/Riqard/Country-Reference.git'
     if st.button('Find the GitHub Repository Here',use_container_width=True):
         st.write(urlGit)
-        webbrowser.open_new_tab(urlGit) 
+
         
     urlApp='https://nguyencountryreferenceguide.streamlit.app/'
     if st.button('Go to Online Version',use_container_width=True):
         st.write(urlApp)
-        webbrowser.open_new_tab(urlApp) 
+
 
       
 
@@ -299,7 +297,7 @@ if selected == 'Economy':
         econURL='https://www.imf.org/en/Publications/WEO/weo-database/2023/April/download-entire-database'
         if st.button('International Monetary Fund'):
             st.write(econURL)
-            webbrowser.open_new_tab(econURL)
+  
  
     
 
@@ -335,7 +333,7 @@ if selected == 'Human Development Index':
         hdiURL='https://hdr.undp.org/data-center/documentation-and-downloads'
         if st.button('United Nations Development Program'):
             st.write(hdiURL)
-            webbrowser.open_new_tab(hdiURL)
+
         
 
 
@@ -400,11 +398,11 @@ if selected == 'Manufacturing':
         st.write('This Data for Manufacturing Output originated from the World Bank')
         if st.button('World Bank'):
             st.write(mfgURL)
-            webbrowser.open_new_tab(mfgURL)      
+   
         st.write('This Data for Manufacturing Wages and General Wages originated from the International Labor Organization')
         if st.button('International Labor Organization'):
             st.write(wageURL)
-            webbrowser.open_new_tab(wageURL)      
+
 
 #MILITARY TAB#-------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -437,11 +435,11 @@ if selected == 'Military Ependiture':
         
         # annual military expenditure
         if choice1 == ['Annual Military Expenditures']:
-            milExpData=show_Data(milExp,cna,'United States of America',1949,2022,2021,'Measured in Millions USD (2021 prices)', 'Millions US Dollars (2021 prices)' ,'Compare Military Expenditure for a Specifc Year', 'Annual Military Expenditure')
+            milExpData=show_Data(milExp,cna,'United States of America',1949,2022,2022,'Measured in Millions USD (2021 prices)', 'Millions US Dollars (2021 prices)' ,'Compare Military Expenditure for a Specifc Year', 'Annual Military Expenditure')
         
         # mil exp as a percent of GDP
         if choice1 == ['Annual Military Expenditures as a Share of GDP']:
-            milExpPerData=show_Data(milExpPer,cna,'United States of America',1949,2022,2021,'Measured as a Percent Makeup', 'Percentage of GDP' ,'Compare Share of GDP for a Specifc Year', 'Annual Military Expenditure as a Share of GDP')
+            milExpPerData=show_Data(milExpPer,cna,'United States of America',1949,2022,2022,'Measured as a Percent Makeup', 'Percentage of GDP' ,'Compare Share of GDP for a Specifc Year', 'Annual Military Expenditure as a Share of GDP')
             
     # Go to original data source
     with milLink:
@@ -449,7 +447,6 @@ if selected == 'Military Ependiture':
         st.write('This Data originated from the Stockholm International Peace Research Institute')
         if st.button('Stockholm International Peace Research Institute'):
             st.write(milURL)
-            webbrowser.open_new_tab(milURL)
 
 
 
@@ -507,6 +504,6 @@ if selected == 'Population':
         popURL='https://population.un.org/wpp/Download/Standard/CSV/'
         if st.button('United Nations Department of Economic And Social Affairs'):
             st.write(popURL)
-            webbrowser.open_new_tab(popURL)
+
 
 
