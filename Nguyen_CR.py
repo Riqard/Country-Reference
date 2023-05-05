@@ -180,7 +180,7 @@ if selected == 'Home':
     st.image(image)
     
     # names the creator
-    st.markdown(':red[Created by] :blue[Richard Nguyen]')
+    st.markdown(':red[Created by] :blue[Richard Duc Thuan Khang Nguyen]')
     
     #Inormation on project
     st.header('Project Description')
