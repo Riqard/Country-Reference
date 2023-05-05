@@ -197,7 +197,6 @@ if selected == 'Home':
         st.code('''
                 
             import pandas as pd \n
-            import matplotlib.pyplot as plt \n
             import streamlit as st \n
             import plotly.express as px \n
             from streamlit_option_menu import option_menu \n
@@ -205,26 +204,22 @@ if selected == 'Home':
             import zipfile as zp
             
             ''', language='python')
+     
+
+    urlGit='https://github.com/Riqard/Country-Reference.git'
+    if st.button('Find the GitHub Repository Here',use_container_width=True):
+        st.write(urlGit)
     
     urlPaper='https://drive.google.com/file/d/11SSczIRyHb7qO7VhDRuTsC7HeSDhMBcG/view?usp=sharing'
     if st.button('Find the Report Here',use_container_width=True):
         st.write(urlPaper)
-
-        
-    urlGit='https://github.com/Riqard/Country-Reference.git'
-    if st.button('Find the GitHub Repository Here',use_container_width=True):
-        st.write(urlGit)
-
         
     urlPres='https://drive.google.com/file/d/1k-0dybbF5_7EwAMUpgbHi24hMhsnEJBI/view?usp=sharing'
     if st.button('Go to Online Presentation',use_container_width=True):
         st.write(urlPres)
 
 
-      
 
-
-   
 #ECONOMIC TAB#-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Extract Economic Data
