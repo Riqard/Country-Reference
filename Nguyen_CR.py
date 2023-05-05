@@ -210,7 +210,7 @@ if selected == 'Home':
     if st.button('Find the GitHub Repository Here',use_container_width=True):
         st.write(urlGit)
     
-    urlPaper='https://drive.google.com/file/d/11SSczIRyHb7qO7VhDRuTsC7HeSDhMBcG/view?usp=sharing'
+    urlPaper='https://drive.google.com/file/d/1r5u2s6wifyww_etehNTyukOV2DlX74tx/view?usp=share_link'
     if st.button('Find the Report Here',use_container_width=True):
         st.write(urlPaper)
         
