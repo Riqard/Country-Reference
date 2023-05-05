@@ -310,7 +310,7 @@ if selected == 'Human Development Index':
     #Give Tab Description
     st.write("The Human Development Index (HDI) is a summary measure of the average achievement in key dimensions of human development. "
              + "These achievements include but are not limited to an individual’s life expectancy, education, standard of living and more. "
-             +"Generally a higher score means that a country is more developed and ranges from 0 to 1."
+             +"Generally a higher score means that a country is more developed and ranges from 0 to 1. "
              +"This data was retrieved from the United Nations Development Program")
     
     # makes data and source tabs
