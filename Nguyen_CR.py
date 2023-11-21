@@ -173,7 +173,6 @@ usa='United States'
 
 #code for Home section
 if selected == 'Home':
-    st.balloons()
     
     #Image is the title header
     image=Image.open('pngwing.com.png')
